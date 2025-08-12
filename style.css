@@ -1,0 +1,230 @@
+:root {
+    scroll-behavior: smooth;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+p {
+    text-align: center;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: white;
+    background-color: black;
+}
+
+header,
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5em;
+}
+
+
+h1 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+    text-align: center;
+    box-shadow: 10px 5px 5px black;
+    background-color: whitesmoke;
+    padding: 0.4rem;
+}
+
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+.navbar li {
+    padding: 0.4rem;
+}
+
+.mypic {
+    max-width: 20em;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 10px 5px 5px black;
+}
+
+.headerWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 40rem;
+    max-height: 40rem;
+}
+
+.profile {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    min-width: 100%;
+    text-align: center;
+    background-color: whitesmoke;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    box-shadow: 10px 5px 5px black;
+}
+
+.gitHubWrap {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: #A9A9A9;
+    min-width: 100%;
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    box-shadow: 10px 5px 5px black;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+
+#education {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: whitesmoke;
+}
+
+#education div {
+    border-radius: 30px;
+    background-color: white;
+    min-height: 30rem;
+    width: 20rem;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 5px 5px black;
+}
+
+#education p {
+    margin: 0.8rem auto;
+}
+
+h3 {
+    padding: 1rem;
+    text-align: center;
+}
+
+#experience h2 {
+    box-shadow: 10px 5px 5px black;
+    padding: 0.4rem;
+    background-color: whitesmoke;
+}
+
+.mermaid {
+    min-width: 80vw;
+    text-align: center;
+}
+
+.workWrapper {
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.workWrapper div {
+    text-align: center;
+    width: 20rem;
+    min-height: 15rem;
+    background: whitesmoke;
+    box-shadow: 10px 5px 5px black;
+    margin: 1rem auto;
+}
+
+#skills {
+    background-color: #A9A9A9
+}
+
+#skills h2 {
+    border-radius: 30px;
+    background-color: white;
+    padding: 1.5rem;
+    margin: 1.5rem;
+    text-align: center;
+    box-shadow: 10px 5px 5px black;
+}
+
+.skillsWrapper {
+    min-width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.skillsWrapper div {
+    text-align: center;
+    min-width: 18rem;
+    margin: 1rem 0.4rem;
+    background-color: white;
+    box-shadow: 10px 5px 5px black;
+
+}
+
+.skillsWrapper p {
+    padding: 0.5rem;
+}
+
+h4 {
+    padding: 0.8rem;
+    font-size: 1.1rem;
+}
+
+footer {
+    padding: 2rem;
+    margin: 1rem 0.4rem;
+    text-align: center;
+}
+
+footer p {
+    margin: 1rem 0.4rem;
+}
+
+button {
+    padding: 0.2rem;
+}

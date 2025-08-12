@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roope Paananen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- NAVIGOINTI JA ETUSIVU -->
+    <header>
+        <h1>Roope Paananen</h1>
+
+        <img class="mypic" src="omakuva.jpg">
+
+        <nav class="navbar">
+            <ul>
+                <li>
+                    <a href="#education">Education</a>
+                </li>
+                <li>
+                    <a href="#experience">Experience</a>
+                </li>
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- PROFIILITEKSTI JA GITHUB "KORTTI" (TÄHÄN FETCH / ASYNC / AWAIT API -JUTTUJA) -->
+        <div class="headerWrap">
+
+            <div class="profile">
+                <h2>About me:</h2>
+                <p>I'm an audio equipment sales specialist with a passion for music.
+                    Currently learning web development and video production.</p>
+            </div>
+            <div class="gitHubWrap">
+                <h2><a id="gitUrl" href="" target="_blank">GitHub profile</a></h2>
+                <div class="info">
+                    <p><strong>User:</strong> <span id="userName"></span></p>
+                    <p><strong>Public repos:</strong> <span id="repos"></span></p>
+                    <p><strong>Followers:</strong> <span id="followers"></span></p>
+                    <p><strong>Following:</strong> <span id="following"></span></p>
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+
+    <section id="education">
+
+        <div>
+            <h3>University of Hertfordshire</h3>
+            <p><i>Hatfield, United Kingdom<br>
+                2016</i></p>
+            <p>Degree:<br>
+            <strong>Bachelor of Arts (Hons) in Business Administration</strong></p>
+            <p>Upper Second-Class Honours (2:1)</p>
+        </div>
+
+        <div>
+            <h3>Xamk</h3>
+            <p><i>Open University Online Studies<br>
+                2024</i></p>
+            <p>Course: <br>
+            Introduction to Video Game Creation</p>
+            <p>14 ECTS Credits</p>
+        </div>
+
+        <div>
+            <h3>Codecademy</h3>
+            <p><i>Online Course<br>
+                2024</i></p>
+            <p>Front-End Engineer Certification</p>
+        </div>
+
+        <div>
+            <h3>freeCodeCamp</h3>
+            <p><i>Online Course<br>
+                2024</i></p>
+            <p>Responsive Web Design Certification</p>
+        </div>
+
+    </section>
+    <!--MERMAID TÄNNE TIMELINE-->
+    <section id="experience">
+
+        <h2>Work Experience</h2>
+
+        <div>
+            <pre class="mermaid">
+                %%{init: {'theme':'neutral'}}%%
+            timeline
+            section HOK-Elanto
+              2014 - 2015 : Cashier
+            section Hennes & Mauritz  
+              2017 - 2019 : Sales Advisor
+            section Verkkokauppa.com
+              2019 - 2021 : Checkout Staff
+              2021 - 2022 : Home Appliance Sales Specialist
+              2022 - Present : Audio & Hifi Sales Specialist
+                    </pre>
+        </div>
+
+        <div class="workWrapper">
+            <div>
+                <h3><u>HOK-Elanto</u></h3>
+                <p><strong>Cashier</strong></p>
+                <p>May 2015 - Aug 2015</p>
+                <p>Jun 2014 - Aug 2014</p>
+                <br>
+                <p><i>7 months total</i></p>
+            </div>
+
+            <div>
+                <h3><u>Hennes & Mauritz</u></h3>
+                <p><strong>Sales Advisor</strong></p>
+                <p>Apr 2017 - Oct 2019</p>
+                <br>
+                <p><i>2 years 7 months total</i></p>
+            </div>
+
+            <div>
+                <h3><u>Verkkokauppa.com</u></h3>
+                <p><strong>Audio & HiFi Sales Specialist</strong></p>
+                <p>Mar 2022 - Present</p>
+                <br>
+                <p><strong>Home Appliance Sales Specialist</strong></p>
+                <p>May 2021 - Feb 2022</p>
+                <br>
+                <p><strong>Checkout Staff</strong></p>
+                <p>Oct 2019 - Apr 2021</p>
+                <br>
+                <p><i>+5 years total</i></p>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="skills">
+
+        <h2>Skills & Competencies</h2>
+
+        <div class="skillsWrapper">
+            <div>
+                <h4>Programming <br>and Web Development</h4>
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>Python</p>
+                <p>JavaScript</p>
+            </div>
+            <div>
+                <h4>Audio Engineering<br>and Production</h4>
+                <p>Recording Audio</p>
+                <p>Mixing & Mastering</p>
+                <p>Musical Composition</p>
+                <p>Reaper DAW</p>
+            </div>
+            <div>
+                <h4>Musical Instruments</h4>
+                <p>Guitar</p>
+                <P>Bass</P>
+                <p>Drums</p>
+            </div>
+            <div>
+                <h4>Languages</h4>
+                <p>Finnish</p>
+                <p>English</p>
+                <p>Swedish</p>
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <footer id="contact">
+
+        <p>Contact:</p>
+
+        <p><strong>roope.paananen@gmail.com</strong></p>
+
+        <button><a href="https://www.linkedin.com/in/roopepaananen/" target="_blank">LinkedIn</a></button>
+
+
+    </footer>
+
+
+    <script>
+        haeData();
+
+        async function haeData() {
+            try {
+                const apiUrl = "https://api.github.com/users/robosulo";
+                const vastaus = await fetch(apiUrl);
+                const tiedot = await vastaus.json();
+
+                document.getElementById("userName").textContent = tiedot.login;
+                document.getElementById("gitUrl").href = tiedot.html_url;
+                document.getElementById("repos").textContent = tiedot.public_repos;
+                document.getElementById("followers").textContent = tiedot.followers;
+                document.getElementById("following").textContent = tiedot.following;
+            } catch (error) {
+                console.error("Dataa ei voitu hakea!", error);
+            }
+        }
+    </script>
+
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+
+</body>
+
+</html>
