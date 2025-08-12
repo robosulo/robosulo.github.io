@@ -1,2 +1,2 @@
 # robosulo.github.io
-My online CV
+This is my website test project for an online CV.
